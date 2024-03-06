@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('city');
+            $table->string('country');
+            $table->string('address');
+            $table->string('notes');
+            $table->string('postal_code');
+            $table->double('latitude');
+            $table->double('longitude');
+            $table->char('locationable_id', 36);
+            $table->string('locationable_type');
             $table->timestamps();
         });
     }

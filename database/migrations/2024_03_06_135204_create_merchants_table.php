@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('merchants', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('user_id');
             $table->string('name');
             $table->string('phone');
             $table->string('status');

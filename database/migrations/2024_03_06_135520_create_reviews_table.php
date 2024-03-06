@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('variant_bought');
+            $table->integer('review');
+            $table->string('message');
             $table->timestamps();
         });
     }

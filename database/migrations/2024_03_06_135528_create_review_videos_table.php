@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('review_videos', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('video');
             $table->timestamps();
         });
     }
