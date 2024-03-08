@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('transaction_headers', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('user_id');
+            $table->string('location_id');
             $table->timestamp('date');
             $table->timestamps();
         });

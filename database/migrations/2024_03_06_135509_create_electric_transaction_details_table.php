@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('electric_transaction_details', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->string('transaction_id')->primary();
             $table->char('electric_token', 36);
             $table->string('subscription_number');
             $table->integer('nominal');

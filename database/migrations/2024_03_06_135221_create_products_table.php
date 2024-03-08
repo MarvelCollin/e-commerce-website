@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('condition');
+            $table->string('merchant_id');
+            $table->string('product_category_id');
             $table->timestamps();
         });
     }

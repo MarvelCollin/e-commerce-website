@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('flash_sale_products', function (Blueprint $table) {
             $table->string('id')->primary();
+            $table->string('product_id');
             $table->integer('discount');
             $table->timestamps();
         });
