@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth''
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -41,7 +41,7 @@ class AuthController extends Controller
         
         Auth::login($user);
 
-        return redirect()->route('home')->with('success', 'User created successfully.');
+        return redirect('/')->with('success', 'User created successfully.');
         // } catch (\Exception $e) {
         // return redirect()->back()->withInput()->withErrors(['error' => 'Failed to create user.']);
         // }
@@ -49,5 +49,6 @@ class AuthController extends Controller
 
     public function login()
     {
+
     }
 }

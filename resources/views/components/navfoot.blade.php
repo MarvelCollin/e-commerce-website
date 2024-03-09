@@ -15,7 +15,7 @@
             @auth
                 <div class="nav-items">
                     <img src="" alt="">
-                    <p>Your Name</p>
+                    <p>{{ auth()->user()->username }}</p>
                 </div>
             @else
                 <div class="nav-items">
