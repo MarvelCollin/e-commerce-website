@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_promos', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->string('promo_id');
-            $table->string('product_id');
+            $table->id();
+            // $table->string('promo_id');
+            // $table->string('product_id');
             $table->integer('discount');
             $table->timestamps();
         });

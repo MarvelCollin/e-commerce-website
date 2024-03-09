@@ -18,9 +18,9 @@
             <p>Register</p>
             <p>Google</p>
 
+            <input type="text" placeholder="username" name="username" required>
             <input type="email" placeholder="email" name="email" required>
             <input type="password" placeholder="password" name="password" required>
-            <input type="text" placeholder="username" name="username" required>
 
             <button type="submit">Register</button>
         </form>

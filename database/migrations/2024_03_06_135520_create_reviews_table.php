@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->string('user_id');
-            $table->string('transaction_id');
-            $table->string('product_id');
+            $table->id();
+            // $table->string('user_id');
+            // $table->string('transaction_id');
+            // $table->string('product_id');
             $table->string('variant_bought');
             $table->integer('review');
             $table->string('message');

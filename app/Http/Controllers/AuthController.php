@@ -5,18 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth''
 
 class AuthController extends Controller
 {
-    public function registerView(){
+    public function registerView()
+    {
         return view('auth.register');
     }
 
-    public function loginview(){
+    public function loginview()
+    {
         return view('auth.login');
     }
 
-    public function register(Request $request){
+    public function register(Request $request)
+    {
         // $validatedData = $request->validate([
         //     'username' => 'string|max:255',
         //     'email' => 'nullable|string|email|unique:users,email|max:255',
@@ -29,20 +33,21 @@ class AuthController extends Controller
         // ]);
 
         // try {
-            User::create([
-                'username' => $request->username,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-            ]);
-            echo "asd";
-            
-            return redirect()->route('home')->with('success', 'User created successfully.');
+        $user = User::create([
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        
+        Auth::login($user);
+
+        return redirect()->route('home')->with('success', 'User created successfully.');
         // } catch (\Exception $e) {
-            // return redirect()->back()->withInput()->withErrors(['error' => 'Failed to create user.']);
+        // return redirect()->back()->withInput()->withErrors(['error' => 'Failed to create user.']);
         // }
     }
 
-    public function login(){
-
+    public function login()
+    {
     }
 }

@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('roomables', function (Blueprint $table) {
-            $table->string('room_id')->primary();
+            // $table->string('room_id')->primary();
+            $table->string('roomable_id');
             $table->string('roomable_type');
             $table->timestamps();
         });

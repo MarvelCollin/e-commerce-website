@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_variants', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->string('product_id');
+            $table->id();
+            // $table->string('product_id');
             $table->string('name');
             $table->integer('stock');
             $table->integer('price');
