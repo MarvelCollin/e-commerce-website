@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('flash_sale_products', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->uuid('id');
             $table->string('product_id');
             $table->integer('discount');
             $table->timestamps();

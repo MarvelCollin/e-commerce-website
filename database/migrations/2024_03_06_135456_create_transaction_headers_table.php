@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transaction_headers', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->uuid('id');
             $table->string('user_id');
             $table->string('location_id');
             $table->timestamp('date');

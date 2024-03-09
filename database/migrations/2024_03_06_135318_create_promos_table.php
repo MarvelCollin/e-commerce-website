@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('promos', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->uuid('id');
             $table->string('promo_name');
             $table->string('promo_image');
             $table->string('promo_description');
